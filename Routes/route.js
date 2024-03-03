@@ -3,7 +3,7 @@ import { addUser,getUsers } from "../controller/user-controller.js";
 import { newConversation,getConversation } from '../controller/conversation-Controller.js';
 import { getMessage, newMessage } from '../controller/message-controller.js';
 import { getImage, uploadFile } from '../controller/image-controller.js';
-import upload from "../../server/middlewares/upload.middleware.js"
+import upload from "../middlewares/upload.middleware.js"
 const route=express.Router();
 
 route.post("/add",addUser);
