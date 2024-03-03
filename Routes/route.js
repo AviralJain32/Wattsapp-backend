@@ -2,7 +2,7 @@ import express from 'express';
 import { addUser,getUsers } from "../controller/user-controller.js";
 import { newConversation,getConversation } from '../controller/conversation-Controller.js';
 import { getMessage, newMessage } from '../controller/message-controller.js';
-import { getImage, uploadFile } from '../../server/controller/image-controller.js';
+import { getImage, uploadFile } from '../controller/image-controller.js';
 import upload from "../../server/middlewares/upload.middleware.js"
 const route=express.Router();
 
