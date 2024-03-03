@@ -4,13 +4,14 @@ import bodyParser from 'body-parser';
 import {createServer} from "http"
 import Connection from './database/db.js';
 import Route from './Routes/route.js'
-import{Server} from "socket.io"
 const app=express();
 const server = createServer(app);
-const io = new Server(server,{
-cors:{
-    origin:"*"
-}});
+const io = require("socket.io")(httpServer, {
+    cors: {
+      origin: "*",
+      methods: ["GET", "POST"]
+    }
+  });
 app.use(cors());
 app.use(bodyParser.json({extended:true}));
 app.use(bodyParser.urlencoded({extended:true}));
